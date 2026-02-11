@@ -1,22 +1,49 @@
-# kei40 
+# kei40
 
-### 40% 4x10 keyboard
+a diy handwired 40% ortholinear keyboard with a 4x10 layout.
 
-fr4 ortholinear plate<br>
-feker holy pandas - stems lubed with 205g0, springs with 105g0<br>
-**raspberry pi pico** for the keeb controller<br>
-22, 8 AWG solid core copper wires<br>
-1N4148 diodes
+### specifications
 
-keeb firmware and layout, written and configured with [qmk](https://qmk.fm/)
+**layout:** 4x10 ortholinear (technically has 39 keys)  
+**plate:** FR4 ortholinear plate  
+**switches:** Feker Holy Panda (rails lubed with Krytox 205g0, springs with Krytox 105g0)  
+**controller:** Raspberry Pi Pico (RP2040)  
+**wiring:** 22 AWG and 8 AWG solid core copper wire  
+**diodes:** 1N4148
+**keycaps:** blank white xda profile keycaps
 
-cd ~/qmk_firmware/keyboards/handwired/kei40<br>
-code keymaps/default/keymap.c<br>
-code info.json
+### firmware
 
-#### compiling:<br>
-cd ~/qmk_firmware<br>
-qmk compile -kb handwired/kei40 -km default<br>
-drag the new **handwired_kei40_default.uf2** file to the RPI-RP2 drive<br>
+this keyboard runs QMK firmware. configuration files can be found in the standard [QMK](https://qmk.fm/) directory structure.
 
-#### personal project [@rileriaaa](https://rileriaaa.vercel.app/)
+### building
+
+navigate to the QMK firmware directory and compile:
+```bash
+cd ~/qmk_firmware
+qmk compile -kb handwired/kei40 -km default
+```
+
+### blashing
+
+1. hold the BOOTSEL button on the Raspberry Pi Pico while plugging in the USB cable
+2. the controller will mount as a drive named `RPI-RP2`
+3. drag the compiled `handwired_{keyboard_name}_default.uf2` file to the drive
+4. the drive will automatically unmount and the keyboard will be ready to use
+
+### development
+
+Edit keymap:
+```bash
+cd ~/qmk_firmware/keyboards/handwired/kei40
+code keymaps/default/keymap.c
+```
+
+edit keyboard configuration:
+```bash
+code keyboard.json
+```
+
+---
+
+personal project by [@rileriaaa](https://rileriaaa.vercel.app/)

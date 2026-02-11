@@ -1,20 +1,25 @@
 # kei40
 
-a diy handwired 40% ortholinear keyboard with a 4x10 layout.
+a diy/custom handwired 40% ortholinear keyboard with a 4x10 layout.
 
-### specifications
+## specifications
 
-**layout:** 4x10 ortholinear (technically has 39 keys)  
+**layout:** 4x10 ortholinear (39 keys)  
 **plate:** FR4 ortholinear plate  
 **switches:** Feker Holy Panda (rails lubed with Krytox 205g0, springs with Krytox 105g0)  
 **controller:** Raspberry Pi Pico (RP2040)  
-**wiring:** 22 AWG and 8 AWG solid core copper wire  
-**diodes:** 1N4148
+**wiring:** 22 AWG solid core copper wire  
+**diodes:** 1N4148<br>
 **keycaps:** blank white xda profile keycaps
 
-### firmware
 
-this keyboard runs QMK firmware. configuration files can be found in the standard [QMK](https://qmk.fm/) directory structure.
+## firmware
+this keyboard runs [QMK](https://qmk.fm/) firmware  with support for multiple layers and customizable keymaps.
+
+### prerequisites
+
+- QMK firmware environment set up
+- QMK CLI tools installed
 
 ### building
 
@@ -24,14 +29,14 @@ cd ~/qmk_firmware
 qmk compile -kb handwired/kei40 -km default
 ```
 
-### blashing
+### flashing
 
 1. hold the BOOTSEL button on the Raspberry Pi Pico while plugging in the USB cable
 2. the controller will mount as a drive named `RPI-RP2`
 3. drag the compiled `handwired_{keyboard_name}_default.uf2` file to the drive
 4. the drive will automatically unmount and the keyboard will be ready to use
 
-### development
+## development
 
 Edit keymap:
 ```bash
@@ -44,6 +49,23 @@ edit keyboard configuration:
 code keyboard.json
 ```
 
+## project Structure
+```
+keyboards/handwired/kei40/
+├── keyboard.json          # hardware configuration
+├── keymaps/
+│   └── default/
+│       └── keymap.c      # default keymap definition
+```
+
+## features
+
+- full QMK firmware support with all standard features
+- three-layer keymap with base, symbol, and function layers
+- momentary layer switching via MO(1) and MO(2)
+- compact 39-key layout optimized for efficiency
+- hot-swappable firmware via USB bootloader
+
 ---
 
-personal project by [@rileriaaa](https://rileriaaa.vercel.app/)
+#### a personal project by [@rileriaaa](https://rileriaaa.vercel.app/)

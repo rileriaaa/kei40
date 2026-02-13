@@ -2,9 +2,10 @@
 
 a diy/custom handwired 40% ortholinear keyboard with a 4x10 layout.
 
-
-![kei40](https://github.com/user-attachments/assets/b140ad96-b9a3-4d8d-b877-9a3faab7178d)
-![kei40](https://github.com/user-attachments/assets/0170b3a1-9312-4b20-b57d-9d033c36396c)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b140ad96-b9a3-4d8d-b877-9a3faab7178d" width="49%">
+  <img src="https://github.com/user-attachments/assets/0170b3a1-9312-4b20-b57d-9d033c36396c" width="49%">
+</p>
 
 *kei (軽) — light in weight; distilled to its essential form.*
 

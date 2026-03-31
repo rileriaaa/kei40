@@ -75,4 +75,4 @@ keyboards/handwired/kei40/
 
 ---
 
-#### a personal project by [@rileriaaa](https://rileriaaa.vercel.app/)
+#### a personal project by [@rileriaaa](https://www.rileriaaa.me/)
